@@ -1,17 +1,12 @@
 .dashboard {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  overflow-y: hidden;
-  margin-top: 30px;
-}
+  justify-content: center;
 
-.dashboard-tabs {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 1050px;
+  h1 {
+    font-size: 40px;
+    padding-top: 30px;
+    font-weight: normal;
+  }
 }
 
 .dashboard-tab {
@@ -29,8 +24,6 @@
 
 .selected-tab {
   border-bottom: none;
-  // font-weight: bold;
-  // text-decoration: underline;
 }
 
 .selected-tab:hover {

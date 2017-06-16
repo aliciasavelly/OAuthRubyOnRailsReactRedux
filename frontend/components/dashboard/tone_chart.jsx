@@ -1,21 +1,4 @@
 import React from "react";
-import { LineChart } from "react-d3-basic";
-
-const SELECTED_LINE = {
-  opacity: 1,
-  strokeWidth: "4px",
-};
-
-const HOVER_LINE = {
-  opacity: 0.7,
-  strokeWidth: "3px",
-}
-
-const UNSELECTED_LINE = {
-  opacity: 0.3,
-  strokeWidth: "2px",
-};
-
 
 class ToneChart extends React.Component {
   constructor(props) {
@@ -241,21 +224,6 @@ class ToneChart extends React.Component {
 
     return <div className="chart-inner" onClick={this.handleClick} onMouseOver={this.handleMouseOver} onMouseLeave={this.handleMouseLeave}>
       <span className="chart-title">{this.props.title}</span>
-      <LineChart
-        margins={{left: 100, right: 100, top: 50, bottom: 50}}
-        data={this.state.dataSet}
-        width={750}
-        height={400}
-        chartSeries={this.fields}
-        x={this.x}
-        xTicks={[0]}
-        xLabel={"Submission"}
-        yTicks={[11]}
-        yDomain={[0, 1]}
-        yLabel={"Score"}
-        showXGrid={false}
-        showYGrid={false}
-      />
       <span className="circles">
         {circles}
       </span>

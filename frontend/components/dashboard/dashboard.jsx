@@ -60,10 +60,7 @@ class Dashboard extends React.Component {
 
     return (
       <div className="dashboard">
-        <div className="dashboard-tabs">
-          <div className={this.state.tabClasses[0]} onClick={this.clickTab}>Tone Trends</div>
-        </div>
-        {this.components[this.state.selectedIndex]}
+        <h1>You're logged in!</h1>
       </div>
     )
   }
