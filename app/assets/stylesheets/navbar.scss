@@ -1,0 +1,101 @@
+.header-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: $darkest-primary;
+  padding: 15px;
+
+  img {
+    width: auto;
+  }
+
+  .header-logo {
+    color: white;
+    margin-left: 30px;
+    transition: 0.2s ease-in-out;
+  }
+
+  .header-logo:hover {
+    transform: scale3d(1.1, 1.1, 1.1);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .header-group {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .analysis-link-wrapper {
+    background-color: $secondary;
+  	border-color: $dark-secondary;
+  	color: white;
+    height: 40px;
+    width: 120px;
+    border-radius: 3px;
+    transition: 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+  }
+
+  .analysis-link-wrapper:hover {
+    cursor: pointer;
+  	background-color: $dark-secondary;
+    border-color: $darkest-secondary;
+  }
+
+  .analysis-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .analysis-link:hover {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.session-links > button {
+  margin: 0 10px;
+  width: 120px;
+  background-color: $primary;
+  border-color: $dark-primary;
+}
+
+.session-links > button:hover {
+  background-color: $dark-primary;
+  border-color: $darkest-primary;
+}
+
+.session-links > button:first-of-type {
+  background-color: $secondary;
+  border-color: $dark-secondary;
+}
+
+.session-links > button:first-of-type:hover {
+  background-color: $dark-secondary;
+  border-color: $darkest-secondary;
+}
+
+.header-group > button {
+  background-color: $primary;
+  border-color: $dark-primary;
+  margin-right: 10px;
+}
+
+.header-group > button:hover {
+  background-color: $dark-primary;
+  border-color: $darkest-primary;
+}

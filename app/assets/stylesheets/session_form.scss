@@ -1,0 +1,122 @@
+.session-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  .form-input {
+    input {
+      margin: 10px 0 0 0;
+      padding: 5px 0 0 0;
+    }
+  }
+
+  .errors {
+    color: #565656;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 0 0 0;
+  }
+}
+
+.form-submit {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+
+  input {
+    background-color: $primary;
+    border-color: $dark-primary;
+    color: $lightest-primary;
+    font-family: $sans-serif;
+    text-align: center;
+    width: 120px;
+    height: 40px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+  }
+
+  input:hover {
+    background-color: $dark-primary;
+    color: $lightest-primary;
+  }
+}
+
+.f-input {
+  padding: 0;
+  position: relative;
+  width: 200px;
+  border: none;
+  outline: none;
+  border-bottom: solid $light-primary;
+  font-size: 16px;
+}
+
+.f-input:focus {
+  border-bottom: solid $dark-primary;
+}
+
+h1 {
+  color: $primary;
+}
+
+.close {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background: none;
+  font-family: Symbola;
+  font-size: 22px;
+  font-weight: lighter;
+  color: $dark-primary;
+}
+
+.close:hover {
+  background: $lightest-primary;
+  color: $darkest-primary;
+}
+
+.soft-button {
+  background: $primary;
+  color: $lightest-primary;
+  border-color: $darkest-primary;
+}
+
+.soft-button:hover {
+  background: $dark-primary;
+  color: $lightest-primary;
+}
+
+.soft-title {
+  background: none;
+  color: $white;
+  font-weight: bolder;
+  width: auto;
+}
+
+.soft-title:hover {
+  background: none;
+  cursor: auto;
+}
+
+.third-party-login {
+  background-color: $lightest-primary;
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+}
+
+.third-party-login:hover {
+  background-color: $light-primary;
+}
+
+.third-party-login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid rgb(180, 180, 180);
+  padding-bottom: 20px;
+}
