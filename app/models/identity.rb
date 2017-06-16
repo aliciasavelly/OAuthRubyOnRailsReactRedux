@@ -14,8 +14,4 @@ class Identity < OmniAuth::Identity::Models::ActiveRecord
   def is_password?(password)
     BCrypt::Password.new(self.password_digest).is_password?(password)
   end
-
-  # def password=(password)
-  #   @password = password
-  # end
 end

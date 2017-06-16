@@ -4,8 +4,6 @@ import Root from './components/root';
 
 import configureStore from './store/store';
 
-// import * as APIUtil from './util/personality_api_util';
-import * as actions from './actions/personality_actions';
 import { login, logout, loginDemoUser } from './util/session_api_util';
 window.login = login;
 window.logout = logout;
@@ -27,9 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-
-  window.fetchPersonality = actions.fetchPersonality;
-  window.updatePersonality = actions.updatePersonality;
 
   const root = document.getElementById('root');
   window.store = store;

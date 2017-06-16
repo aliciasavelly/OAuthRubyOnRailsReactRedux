@@ -11,8 +11,8 @@ Rails.application.routes.draw do
     get 'auth/failure', to: 'sessions#failure'
     resource :session, only: [:create, :destroy]
     resources :identities, only: [:create]
-    resources :blurbs, only: [:create, :show, :index]
-    resources :personalities, only: [:show, :update]
+    # resources :blurbs, only: [:create, :show, :index]
+    # resources :personalities, only: [:show, :update]
   end
 
   match "*path", :to => proc {|env| [200, {
