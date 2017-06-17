@@ -122,13 +122,13 @@ class SessionForm extends React.Component {
           <h1>{`Please ${this.state.formType}`}</h1>
 					<div className="third-party-login-wrapper">
 						<button type="button" className="third-party-login" onClick={this.handleGoogleSubmit}>
-		          <img src="assets/google1.png"></img>
+		          <img src="assets/google.png"></img>
 		        </button>
 						<button type="button" className="third-party-login" onClick={this.handleFacebookSubmit}>
 		          <img src="assets/facebook.png"></img>
 		        </button>
 						<button type="button" className="third-party-login" onClick={this.handleLinkedinSubmit}>
-		          <img src="assets/linkedin1.png"></img>
+		          <img src="assets/linkedin.png"></img>
 		        </button>
 					</div>
           {this.renderErrors()}
