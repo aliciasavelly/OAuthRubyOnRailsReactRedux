@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { requestLogin, requestSignup, requestGoogleLogin, clearErrors } from '../../../actions/session_actions';
+import { requestLogin, requestSignup, clearErrors } from '../../../actions/session_actions';
 import SessionForm from './session_form';
 
 
@@ -13,7 +13,6 @@ const mapDispatchToProps = (dispatch, { formType }) => {
   return {
     login: user => dispatch(requestLogin(user)),
     signup: user => dispatch(requestSignup(user)),
-    googleAction: () => dispatch(requestGoogleLogin()),
     clearErrors: () => dispatch(clearErrors())
   };
 };
