@@ -2,10 +2,7 @@ import { connect } from "react-redux";
 import Dashboard from "./dashboard";
 
 const mapStateToProps = (state, ownProps) => {
-  return {
-    blurbs: state.blurbs,
-    personality: state.personality
-  };
+  return {};
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
