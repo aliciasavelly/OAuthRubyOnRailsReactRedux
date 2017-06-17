@@ -115,20 +115,21 @@ class SessionForm extends React.Component {
 
 	render() {
 		return (
-      <div>
+      <div className="outer-session-form">
+				<h1>{`Please ${this.state.formType}`}</h1>
+				<div className="third-party-login-wrapper">
+					<button type="button" className="third-party-login" onClick={this.handleGoogleSubmit}>
+						<img src="assets/google.png"></img>
+					</button>
+					<button type="button" className="third-party-login" onClick={this.handleFacebookSubmit}>
+						<img src="assets/facebook.png"></img>
+					</button>
+					<button type="button" className="third-party-login" onClick={this.handleLinkedinSubmit}>
+						<img src="assets/linkedin.png"></img>
+					</button>
+				</div>
+
         <form onSubmit={this.handleSubmit} className='session-form'>
-          <h1>{`Please ${this.state.formType}`}</h1>
-					<div className="third-party-login-wrapper">
-						<button type="button" className="third-party-login" onClick={this.handleGoogleSubmit}>
-		          <img src="assets/google.png"></img>
-		        </button>
-						<button type="button" className="third-party-login" onClick={this.handleFacebookSubmit}>
-		          <img src="assets/facebook.png"></img>
-		        </button>
-						<button type="button" className="third-party-login" onClick={this.handleLinkedinSubmit}>
-		          <img src="assets/linkedin.png"></img>
-		        </button>
-					</div>
           {this.renderErrors()}
           <div className='form-input'>
             <input

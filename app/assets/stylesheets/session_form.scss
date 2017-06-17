@@ -1,8 +1,13 @@
+.outer-session-form {
+  text-align: center;
+}
+
 .session-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  padding-top: 20px;
 
   .form-input {
     input {
@@ -23,6 +28,7 @@
   display: flex;
   flex-direction: row;
   align-self: center;
+  padding-top: 10px;
 
   input {
     background-color: $primary;
@@ -118,5 +124,5 @@ h1 {
   align-items: center;
   width: 100%;
   border-bottom: 1px solid rgb(180, 180, 180);
-  padding-bottom: 20px;
+  // padding-bottom: 20px;
 }
