@@ -1,7 +1,7 @@
 {
-  "name": "tonealyzer",
+  "name": "OAuthProject",
   "version": "1.0.0",
-  "description": "tone analyzer using Watson API",
+  "description": "Using OAuth with Ruby on Rails and React/Redux",
   "main": "bundle.js",
   "directories": {
     "doc": "docs"
@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kyumin133/tonealyzer.git"
+    "url": "git+https://github.com/aliciasavelly/OAuthRubyOnRailsReactRedux"
   },
-  "author": "Ken (Kyumin)",
+  "author": "Alicia Savelly",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kyumin133/tonealyzer/issues"
+    "url": "https://github.com/aliciasavelly/OAuthRubyOnRailsReactRedux"
   },
-  "homepage": "https://github.com/kyumin133/tonealyzer#readme",
+  "homepage": "https://github.com/aliciasavelly/OAuthRubyOnRailsReactRedux",
   "dependencies": {
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.1",
