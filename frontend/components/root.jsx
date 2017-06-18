@@ -9,7 +9,6 @@ import DashboardContainer from "./dashboard/dashboard_container";
 class Root extends React.Component {
   constructor(props) {
     super(props);
-    this.redirectIfLoggedIn = this.redirectIfLoggedIn.bind(this);
   }
 
   redirectIfLoggedIn(nextState, replace) {
@@ -17,27 +16,26 @@ class Root extends React.Component {
 
     store.dispatch(clearErrors());
     if (currentUser) {
-      hashHistory.push("/home");
+      replace("/home");
     }
   }
 
-  ensureLoggedIn(nextState, replace) {
+  redirectIfLoggedOut(nextState, replace) {
     const currentUser = store.getState().session.currentUser;
 
     if (currentUser === null) {
-      hashHistory.push("/");
+      replace("/");
     }
   }
 
   render() {
-    let store = this.props.store;
-    return <Provider store={ store }>
+    return <Provider store={ this.props.store }>
       <Router history={ hashHistory }>
         <Route path="/" component={ App } >
-          <IndexRoute component={ Splash } onEnter={this.redirectIfLoggedIn} />
-          <Route path="/home" component={ DashboardContainer } onEnter={this.ensureLoggedIn} />
-          <Route path="/redirect" component={ Splash } onEnter={this.redirectIfLoggedIn} />
-          <Route path="/logout" component={ Splash } onEnter={this.ensureLoggedIn} />
+          <IndexRoute component={ Splash } onEnter={ this.redirectIfLoggedIn } />
+          <Route path="/home" component={ DashboardContainer } onEnter={ this.redirectIfLoggedOut } />
+          <Route path="/redirect" component={ Splash } onEnter={ this.redirectIfLoggedIn } />
+          <Route path="/logout" component={ Splash } onEnter={ this.redirectIfLoggedOut } />
         </Route>
       </Router>
     </Provider>;

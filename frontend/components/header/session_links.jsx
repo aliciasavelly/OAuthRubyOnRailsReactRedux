@@ -10,6 +10,7 @@ class SessionLinks extends React.Component {
       open: false,
       formType: 'Log In'
     };
+    
     this.handleLogin= this.handleLogin.bind(this);
     this.handleDemo= this.handleDemo.bind(this);
     this.handleLoginOpen = this.handleLoginOpen.bind(this);
