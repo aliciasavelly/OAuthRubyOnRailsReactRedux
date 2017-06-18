@@ -32,12 +32,12 @@ class Root extends React.Component {
   render() {
     let store = this.props.store;
     return <Provider store={ store }>
-      <Router history={hashHistory}>
+      <Router history={ hashHistory }>
         <Route path="/" component={ App } >
           <IndexRoute component={ Splash } onEnter={this.redirectIfLoggedIn} />
           <Route path="/home" component={ DashboardContainer } onEnter={this.ensureLoggedIn} />
-          <Route path="/redirect" component={Splash} onEnter={this.redirectIfLoggedIn} />
-          <Route path="/logout" component={Splash} onEnter={this.ensureLoggedIn} />
+          <Route path="/redirect" component={ Splash } onEnter={this.redirectIfLoggedIn} />
+          <Route path="/logout" component={ Splash } onEnter={this.ensureLoggedIn} />
         </Route>
       </Router>
     </Provider>;

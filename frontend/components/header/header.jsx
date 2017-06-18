@@ -1,6 +1,5 @@
 import React from 'react';
 import { hashHistory, Link } from 'react-router';
-
 import PersonalGreeting from './personal_greeting';
 import SessionLinks from './session_links';
 

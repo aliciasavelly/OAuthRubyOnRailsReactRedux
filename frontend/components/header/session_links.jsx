@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Modal from './modal';
 import SessionFormContainer from './session_form/session_form_container';
 
