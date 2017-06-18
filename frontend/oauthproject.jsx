@@ -1,17 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
-
 import configureStore from './store/store';
-
-import { login, logout, loginDemoUser } from './util/session_api_util';
-window.login = login;
-window.logout = logout;
-window.loginDemoUser = loginDemoUser;
-import { requestLogin, requestLogout, requestDemoUser } from './actions/session_actions';
-window.requestLogin = requestLogin;
-window.requestLogout = requestLogout;
-window.requestDemoUser = requestDemoUser;
 
 document.addEventListener('DOMContentLoaded', () => {
   let store = {};
@@ -27,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const root = document.getElementById('root');
+  // TODO remove from window
   window.store = store;
 
   ReactDOM.render(<Root store={ store } />, root);

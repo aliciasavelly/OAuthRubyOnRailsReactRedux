@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import { clearErrors } from '../actions/session_actions';
 import App from "./app";
-import Splash from "./splash";
+import Splash from "./splash/splash";
 import DashboardContainer from "./dashboard/dashboard_container";
 
 class Root extends React.Component {
@@ -38,7 +38,7 @@ class Root extends React.Component {
           <Route path="/logout" component={ Splash } onEnter={ this.redirectIfLoggedOut } />
         </Route>
       </Router>
-    </Provider>;
+    </Provider>
   }
 }
 
