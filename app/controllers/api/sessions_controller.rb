@@ -18,18 +18,15 @@ class Api::SessionsController < ApplicationController
     end
 
     if @user
-      # debugger
       # sleep 0.25
       login(@user)
       render "/api/users/show"
       return
     elsif env["omniauth.auth"]
-      # debugger
       @user = User.from_omniauth(env["omniauth.auth"])
       login(@user)
       redirect_to "#/redirect"
     else
-      # debugger
       render(json: ['Invalid username or password.'],
              status: 401)
     end
@@ -48,5 +45,4 @@ class Api::SessionsController < ApplicationController
   def failure
     # redirect_to root_path, alert: "Authentication failed!"
   end
-
 end

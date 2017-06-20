@@ -39,12 +39,12 @@ class SessionForm extends React.Component {
 		e.preventDefault();
 		const user = this.state;
 		if (this.state.formType === 'Log In') {
-			this.props.login({user});
-			this.handleIdentitySubmit();
+			this.props.login({ user });
+			// this.handleIdentitySubmit();
 		}
 		else {
-			this.props.signup({user});
-			this.handleIdentitySignUp();
+			this.props.signup({ user });
+			// this.handleIdentitySignUp();
 		}
 	}
 
