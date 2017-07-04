@@ -40,6 +40,7 @@ class SessionForm extends React.Component {
 		const user = this.state;
 		if (this.state.formType === 'Log In') {
 			this.props.login({ user });
+			// TODO
 			// this.handleIdentitySubmit();
 		}
 		else {
@@ -63,13 +64,14 @@ class SessionForm extends React.Component {
 		window.location = "/api/auth/linkedin";
 	}
 
-	handleIdentitySubmit() {
-		window.location = "/api/auth/identity/callback";
-	}
-
-	handleIdentitySignUp() {
-		window.location = "api/auth/identity/register/callback";
-	}
+	// TODO
+	// handleIdentitySubmit() {
+	// 	window.location = "/api/auth/identity/callback";
+	// }
+	//
+	// handleIdentitySignUp() {
+	// 	window.location = "api/auth/identity/register/callback";
+	// }
 
 	navLink() {
 		if (this.state.formType === "Log In") {
